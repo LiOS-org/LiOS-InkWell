@@ -13,11 +13,9 @@ export function insertHeading(editor, level = 1) {
     range.insertNode(heading);
 
     // Add a line break after heading and caret placeholder
-    const lineBreak = document.createElement("br");
     const space = document.createTextNode("\u200B"); // caret holder
 
-    heading.after(lineBreak);
-    lineBreak.after(space);
+    heading.after(space);
 
     range.setStartAfter(space);
     range.collapse(true);
