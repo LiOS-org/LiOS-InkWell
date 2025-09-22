@@ -1,0 +1,14 @@
+@import url("https://lios-open.web.app/LiOS_Open.css");
+:root{
+    background: linear-gradient(to left, red, green);
+}
+.inkwell-input,.inkwell-output{
+    width: 90%;
+    height: 300px;
+    justify-self: center;
+    margin-top: 10px;
+    background: var(--f0f0e0);
+}
+.inkwell-input{
+    overflow-y: auto;
+}

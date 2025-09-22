@@ -1,0 +1,50 @@
+{
+    "name" : "LiOS-InkWell",
+    "description" : "InkWell is developed as a core `Rich Text Engine` for LiOS-ecosystem (consists of LiOS-Colors, LiOS-Open and many upcoming).LiOS-InkWell abstracts most of JS and provides a simple engine that can be utilized to build blogspaces, docs and many more. It provides a set of `modules` which enables developer to only import what is required and avoids bloatware.",
+    "version" : "1.0.0-alpha-1",
+    "status" : "alpha",
+    "gitHub" : "https://github.com/LiOS-org/Tech-Informal",
+    "contributors" : [
+        {
+            "name" : "MD Saifullah",
+            "gitHub" : "https://github.com/MD-Saifullah-1524"
+        }
+    ],
+    "modules" : [
+        {
+            "name" : "boldText",
+            "function" : "Inserts bold text",
+            "status" : "alpha"
+        },
+        {
+            "name" : "divider",
+            "function" : "Inserts an <hr> element",
+            "status" : "alpha"
+        },
+        {
+            "name" : "headings",
+            "function" : "Inserts 3 types of headings, h1, h2 and h3 which can be done using variables ",
+            "status" : "alpha"
+        },
+        {
+            "name" : "imageInsertion",
+            "function" : "Inserts an image which is followed by a LineBreak",
+            "status" : "alpha"
+        },
+        {
+            "name" : "LineBreak",
+            "function" : "Inserts an <br> element",
+            "status" : "alpha"
+        },
+        {
+            "name" : "newLink",
+            "function" : "Inserts a new hyperlink",
+            "status" : "alpha"
+        },
+        {
+            "name" : "underlineText",
+            "function" : "Inserts text with underline",
+            "status" : "alpha"
+        }
+    ]
+}
