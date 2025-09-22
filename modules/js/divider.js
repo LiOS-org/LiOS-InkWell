@@ -4,9 +4,14 @@ export function divider(editor) {
 
     let range;
     
+    // Use current selection if available, otherwise insert at end
+    if (selection.rangeCount > 0) {
+        range = selection.getRangeAt(0);
+    } else {
         range = document.createRange();
         range.selectNodeContents(editor);
         range.collapse(false);
+    }
 
 
     const divider = document.createElement("hr");
@@ -14,7 +19,6 @@ export function divider(editor) {
     range.insertNode(divider);
     const space = document.createTextNode("\u200B");
 
-    range.insertNode(divider);
     divider.after(space);
 
     // Move cursor after the inserted link

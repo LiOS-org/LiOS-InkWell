@@ -4,9 +4,15 @@ export function underlineText(editor) {
     if (!text) return;
 
     let range;
-    range = document.createRange();
-    range.selectNodeContents(editor);
-    range.collapse(false);
+    
+    // Use current selection if available, otherwise insert at end
+    if (selection.rangeCount > 0) {
+        range = selection.getRangeAt(0);
+    } else {
+        range = document.createRange();
+        range.selectNodeContents(editor);
+        range.collapse(false);
+    }
 
     const underline = document.createElement("u");
     underline.textContent = text;

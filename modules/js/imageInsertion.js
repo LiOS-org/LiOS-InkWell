@@ -3,9 +3,16 @@ export function insertImage(editor) {
     if (!url) return;
 
     const selection = window.getSelection();
-    let range = document.createRange();
-    range.selectNodeContents(editor);
-    range.collapse(false);
+    let range;
+    
+    // Use current selection if available, otherwise insert at end
+    if (selection.rangeCount > 0) {
+        range = selection.getRangeAt(0);
+    } else {
+        range = document.createRange();
+        range.selectNodeContents(editor);
+        range.collapse(false);
+    }
 
     const img = document.createElement("img");
     img.src = url;

@@ -4,9 +4,14 @@ export function lineBreak(editor) {
 
     let range;
     
+    // Use current selection if available, otherwise insert at end
+    if (selection.rangeCount > 0) {
+        range = selection.getRangeAt(0);
+    } else {
         range = document.createRange();
         range.selectNodeContents(editor);
         range.collapse(false);
+    }
 
 
     const lineBreak = document.createElement("br");
@@ -14,7 +19,6 @@ export function lineBreak(editor) {
     range.insertNode(lineBreak);
     const space = document.createTextNode("\u200B");
 
-    range.insertNode(lineBreak);
     lineBreak.after(space);
 
     // Move cursor after the inserted link
